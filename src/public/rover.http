@@ -1,0 +1,29 @@
+# SPIRIT
+
+# PHOTOS
+# https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1000&api_key=
+
+# INFO
+# https://api.nasa.gov/mars-photos/api/v1/manifests/spirit?api_key=
+
+# End Spirit
+
+# Opportunity
+
+# PHOTOS
+# https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1000&api_key=
+
+# INFO
+# https://api.nasa.gov/mars-photos/api/v1/manifests/opportunity?api_key=
+
+# End Opportunity
+
+# Curiosity
+
+# PHOTOS
+# https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=
+
+# INFO
+# https://api.nasa.gov/mars-photos/api/v1/manifests/curiosity?api_key=
+
+# End Curiosity
