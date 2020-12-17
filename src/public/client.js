@@ -24,8 +24,8 @@ const render = async (root, state) => {
     root.innerHTML = App(state)
 }
 
-// Navigation helper function
-const changeIndex = (element, index) => {    
+// Navigation helper high order fuction
+const changeIndex = (element, index, getInfo, getPhotos) => {    
     const navigation = document.getElementsByClassName("nav-item");
     for(let i = 0; i < navigation.length; i++) {
         if(navigation[i] === element) {
@@ -41,7 +41,8 @@ const changeIndex = (element, index) => {
 }
 
 // Inner html of the root is updated. Create content.
-const App = (state) => {
+// High order function
+const App = (state, displayRoverPhotos, displayRoverInfo) => {
     let rovers = state.get('rover');
     let info = state.get('info');
     let photos = state.get('photos');    
@@ -49,7 +50,7 @@ const App = (state) => {
 
     return `
         ${Header(rovers)}
-        ${Main(info, photos, displayRoverPhotos, displayRoverInfo)}
+        ${renderMain(info, photos, displayRoverPhotos, displayRoverInfo)}
         ${Footer(name.name)}
     `
 }
@@ -73,7 +74,8 @@ const Header = (state) => {
             </header>`;
 }
 
-const Main = (info, photos, displayRoverPhotos, displayRoverInfo) => {
+// High order function
+const renderMain = (info, photos, displayRoverPhotos, displayRoverInfo) => {
     const roverData = displayRoverInfo(info);
     const roverPhotos = displayRoverPhotos(photos);
     return `
